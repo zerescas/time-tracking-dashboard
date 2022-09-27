@@ -59,7 +59,7 @@ function processData(statData, timeframe) {
             <div class="stat-card__titlebar">
               <div class="stat_card__header">${statData.title}</div>
               <div class="stat-card__action-btn">
-                <img src="/images/icon-ellipsis.svg" alt="ellipsis-icon">
+                <img src="images/icon-ellipsis.svg" alt="ellipsis-icon">
               </div>
             </div>
 
