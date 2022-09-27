@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+
+    <main>
+
+      <div class="time-tracking-dashboard">
+
+        <div class="user-card">
+
+          <div class="user-card__top-content">
+            <img class="user-card__avatar" src="/images/image-jeremy.png" alt="user-avatar">
+            <div class="user-card__header">Report for</div>
+            <h1 class="user-card__user-name">Jeremy Robson</h1>
+          </div>
+
+          <div class="user-card__bottom-content">
+            <div class="user-card__timeframe-btn">
+              <input type="radio" name="timeframe" id="daily-timeframe-btn" value="daily">
+              <label for="daily-timeframe-btn" class="user-card__time-option">Daily</label>
+            </div>
+
+            <div class="user-card__timeframe-btn">
+              <input type="radio" name="timeframe" id="weekly-timeframe-btn" value="weekly">
+              <label for="weekly-timeframe-btn" class="user-card__time-option">Weekly</label>
+            </div>
+
+            <div class="user-card__timeframe-btn">
+              <input type="radio" name="timeframe" id="monthly-timeframe-btn" value="monthly">
+              <label for="monthly-timeframe-btn" class="user-card__time-option">Monthly</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+
+</html>
+
+<!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Your Name Here</a>.
+</div> -->

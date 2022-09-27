@@ -1,0 +1,429 @@
+:root {
+
+  /* ! Font size: 18px (card titles e.g. Work, Play) */
+  /* ! Mobile: 375px - Desktop: 1440px */
+
+  /*=====
+  Primary Colors
+  =====*/
+
+  --blue: hsl(246, 80%, 60%);
+
+  /* Work */
+  --light-orange: hsl(15, 100%, 70%);
+
+  /* Play */
+  --soft-blue: hsl(195, 74%, 62%);
+
+  /* Study */
+  --light-red: hsl(348, 100%, 68%);
+
+  /* Exercise */
+  --limel-green: hsl(145, 58%, 55%);
+
+  /* Social */
+  --violet: hsl(264, 64%, 52%);
+
+  /* Self care */
+  --soft-orange: hsl(43, 84%, 65%);
+
+  /*=====
+  Neutral Colors
+  =====*/
+
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Other */
+
+  --card-border-radius: 1rem;
+  --card-padding: 1.93rem;
+}
+
+html {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: var(--very-dark-blue);
+}
+
+main {
+  flex: 1 0 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1.5rem;
+}
+
+/* Time tracking dashboard */
+
+.time-tracking-dashboard {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 69.5rem;
+  gap: 1.8rem;
+  color: var(--white);
+}
+
+/* User card */
+
+.user-card {
+  background-color: var(--dark-blue);
+  grid-row: 1 / span 2;
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* User card - top content */
+
+.user-card__top-content {
+  background-color: var(--blue);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  flex: 1 0 0;
+}
+
+.user-card__avatar {
+  border: solid 0.2rem var(--white);
+  border-radius: 100%;
+  width: 5.3rem;
+  cursor: pointer;
+  margin-bottom: 2.4rem;
+  margin-top: .3rem;
+}
+
+.user-card__header {
+  color: var(--pale-blue);
+  font-size: .95em;
+  font-weight: 400;
+}
+
+.user-card__user-name {
+  font-size: 2.5em;
+  line-height: 1.2;
+  word-spacing: 100vw;
+  font-weight: 200;
+}
+
+/* User card - bottom content */
+
+.user-card__bottom-content {
+  padding: calc(var(--card-padding) - .3rem) var(--card-padding) var(--card-padding);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+/* User card - timeframe radio button */
+
+.user-card__timeframe-btn {
+  margin-bottom: 1rem;
+}
+
+.user-card__timeframe-btn:last-child {
+  margin-bottom: 0;
+}
+
+.user-card__timeframe-btn>input {
+  display: none;
+}
+
+.user-card__timeframe-btn>label {
+  color: var(--desaturated-blue);
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 400;
+  transition: .15s;
+}
+
+.user-card__timeframe-btn:hover>label {
+  color: var(--white);
+}
+
+.user-card__timeframe-btn>input:checked+label {
+  color: var(--white);
+}
+
+/* Statistic card */
+
+.stat-card {
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 2.8rem 1fr;
+}
+
+/* Stat card background and icon */
+
+.stat-card__bg {
+  display: flex;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  /* Bad bottom angles fix */
+  height: calc(100% - var(--card-border-radius));
+  justify-content: right;
+}
+
+.stat-card__icon {
+  height: 5.2rem;
+}
+
+/* Stat card bg work */
+
+.stat-card__bg--work {
+  background-color: var(--light-orange);
+}
+
+.stat-card__bg--work .stat-card__icon {
+  transform: translate(-1rem, -.7em);
+}
+
+/* Stat card bg play */
+
+.stat-card__bg--play {
+  background-color: var(--soft-blue);
+}
+
+.stat-card__bg--play .stat-card__icon {
+  /* height: 3.5rem; */
+  transform: translate(-1rem, -.4rem);
+}
+
+/* Stat card bg exercise */
+
+.stat-card__bg--exercise {
+  background-color: var(--limel-green);
+}
+
+.stat-card__bg--exercise .stat-card__icon {
+  height: 3.5rem;
+  transform: translate(-1rem, -.1rem);
+}
+
+/* Stat card bg social */
+
+.stat-card__bg--social {
+  background-color: var(--violet);
+  /* Without additional icon setup  */
+}
+
+.stat-card__bg--social .stat-card__icon {
+  height: 6.5rem;
+  transform: translate(-1rem, -1rem);
+}
+
+/* Stat card bg study */
+
+.stat-card__bg--study {
+  background-color: var(--light-red);
+}
+
+.stat-card__bg--study .stat-card__icon {
+  transform: translate(-1rem, -.4em);
+}
+
+/* Stat card bg self-care */
+
+.stat-card__bg--self-care {
+  background-color: var(--soft-orange);
+}
+
+.stat-card__bg--self-care .stat-card__icon {
+  height: 4.2rem;
+  transform: translate(-1rem, -.5rem);
+}
+
+/* Stat card bottom content */
+
+.stat-card__bottom-content::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--dark-blue);
+  content: "";
+  transition: .15s;
+}
+
+/* Split background and content because filter applied to both */
+.stat-card__bottom-content:hover::before {
+  filter: brightness(1.7);
+}
+
+.stat-card__bottom-content {
+  position: relative;
+  grid-column: 1;
+  grid-row: 2/3;
+  border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+  padding: calc(var(--card-padding) - .3rem) var(--card-padding) var(--card-padding);
+  overflow: hidden;
+}
+
+.stat-card__bottom-content * {
+  position: relative;
+}
+
+/* Stat card titlebar */
+
+.stat-card__titlebar {
+  display: flex;
+  margin-bottom: .9rem;
+}
+
+.stat_card__header {
+  font-weight: 400;
+  font-size: 1.2em;
+  flex: 1 0 0;
+}
+
+/* Stat card aciton button */
+
+.stat-card__action-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-card__action-btn>img {
+  transition: .1s;
+  transition-property: filter;
+}
+
+.stat-card__action-btn:hover>img {
+  filter: contrast(2);
+}
+
+/* Stat card current-data and last-data */
+
+.stat-card__data-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.stat-card__current-data {
+  font-size: 3.4em;
+  font-weight: 200;
+}
+
+.stat-card__prev-data {
+  color: var(--pale-blue);
+  font-size: .95em;
+}
+
+/* Attribution */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1120px) {
+
+  .time-tracking-dashboard {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+
+  .user-card {
+    grid-row: 1 / span 2;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .time-tracking-dashboard {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .time-tracking-dashboard {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+
+  .user-card__top-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .user-card__avatar {
+    width: 4.5rem;
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    margin: 0 1rem 0 0;
+    align-self: center;
+  }
+
+  .user-card__header {
+    grid-row: 1;
+    grid-column: 2;
+    margin: 0;
+    align-self: flex-end;
+  }
+
+  .user-card__user-name {
+    grid-row: 2;
+    grid-column: 2;
+    margin: 0;
+    font-size: 1.5em;
+    word-spacing: 0;
+  }
+
+  .user-card__bottom-content {
+    padding: calc(var(--card-padding) / 1.2) var(--card-padding);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  .user-card__timeframe-btn {
+    margin: 0;
+  }
+
+  .stat-card__titlebar {
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  .stat-card__data-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .stat-card__current-data {
+    flex: 1 0 0;
+    font-size: 2em;
+  }
+
+  .stat-card__prev-data {
+    text-align: right;
+  }
+}
