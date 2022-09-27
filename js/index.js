@@ -51,7 +51,7 @@ function processData(statData, timeframe) {
   timeTrackingDashboard.append(`
         <div class="stat-card">
           <div class="stat-card__bg stat-card__bg--${statName}">
-            <img class="stat-card__icon" src="/images/icon-${statName}.svg" alt="${statName}-icon">
+            <img class="stat-card__icon" src="images/icon-${statName}.svg" alt="${statName}-icon">
           </div>
 
           <div class="stat-card__bottom-content">

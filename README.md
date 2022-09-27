@@ -50,7 +50,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [...](...)
+- Live Site URL: [https://zerescas.github.io/time-tracking-dashboard](https://zerescas.github.io/time-tracking-dashboard)
 
 ## My process
 
